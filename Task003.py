@@ -3,16 +3,21 @@ def Print(array, rows):
     for i in range(rows):
         print(*array[i])
 def Final(array, rows):
-    for i in range(rows):
-        if ((array[i][0] == array[i][1] == array[i][2] == 'x')
-            or (array[i][0] == array[i][1] == array[i][2] == '0')
-            or (array[0][i] == array[1][i] == array[2][i] == 'x')
-            or (array[0][0] == array[1][1] == array[2][2] == 'x')
-            or (array[0][0] == array[1][1] == array[2][2] == '0')):
-            return '1'
-        else:
-            return ''
-
+    if ((array[0][0] == array[0][1] == array[0][2] == 'x')
+        or (array[0][0] == array[0][1] == array[0][2] == '0')
+        or (array[1][0] == array[1][1] == array[1][2] == 'x')
+        or (array[1][0] == array[1][1] == array[1][2] == '0')
+        or (array[2][0] == array[2][1] == array[2][2] == 'x')
+        or (array[2][0] == array[2][1] == array[2][2] == '0')
+        or (array[0][0] == array[1][0] == array[2][0] == 'x')
+        or (array[0][0] == array[1][0] == array[2][0] == '0')
+        or (array[0][1] == array[1][1] == array[2][1] == 'x')
+        or (array[0][1] == array[1][1] == array[2][1] == '0')
+        or (array[0][2] == array[1][2] == array[2][2] == 'x')
+        or (array[0][2] == array[1][2] == array[2][2] == '0')
+        or (array[0][0] == array[1][1] == array[2][2] == 'x')
+        or (array[0][0] == array[1][1] == array[2][2] == '0')):
+        return '1'
 
 game = [['.', '.', '.'],
         ['.', '.', '.'],
